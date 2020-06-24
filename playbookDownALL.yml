@@ -1,0 +1,14 @@
+---
+- name: Setting up LAMP Website
+  hosts: testsite.middlewareinventory.com
+  become: yes
+  tasks:
+    - name: latest version of all required packages installed
+      apt:
+        name:
+          
+          - apach2
+          - sql
+          - php
+          - vls
+      state: latest
