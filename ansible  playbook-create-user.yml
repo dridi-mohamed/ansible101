@@ -1,0 +1,7 @@
+# ansible take systeme target systeme 
+---
+- host: linux
+  task:
+- name: Création d'un utilisateur
+  user: name=Ghost comment='test user' shell=/usr/bin/bash
+   
