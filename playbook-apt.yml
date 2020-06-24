@@ -1,0 +1,34 @@
+# This is a collocation of anisble playbook
+
+
+#1- install softawer 
+
+---
+ - hosts: all
+   tasks:
+     - name: Install apache httpd  (state=present is optional)
+       apt:
+          name: apache2
+          state: present
+
+
+# 2- update Sofwater
+---
+ - hosts: all
+   tasks:
+      - name: update softwaer
+       
+        update_cache: yes
+
+# 3 Romve sofware 
+---
+ - hosts: all
+   tasks:
+
+    - name: Remove "foo" package
+      apt:
+        name: foo
+        state: absent
+
+
+    
