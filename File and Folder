@@ -1,0 +1,17 @@
+create file 
+ansible -i myhosty -m file -a "path=/home/node/AKA.html state=touch"  linux  -k
+
+
+change mode “Read excite write”
+ansible -i myhosty -m file -a "path=/home/node/job.sh state=touch mode=777"  linux  -k  
+
+delete
+ ansible -i myhosty -m file -a "path=/home/node/2020.txt  state=absent"  linux  -k
+
+
+create Directory 
+ansible -i myhosty linux  -m file -a "path=/home/node/Project  state=directory"  -k
+
+
+run as root
+ ansible -i myhosty linux -m file -a  "path=/etc/dome.txt state=touch" -b  -K
