@@ -1,0 +1,16 @@
+		----------------------------------------------
+			TAKE FULL information about system
+		----------------------------------------------
+
+full information :lshw 
+sammry information os   lshw  -short
+
+Print the in Html file (Recommand )lshw -html > detail.html
+run file with in browser firefox detail.html 
+
+CPU info    lscpu 
+Disk info3  lsblk 
+USB info    lsusb 
+more USB info   lsusb -v
+ 
+
