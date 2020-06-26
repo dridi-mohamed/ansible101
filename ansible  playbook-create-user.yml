@@ -1,18 +1,13 @@
 # ansible take systeme target systeme 
 ---
-- hosts: linux
-  become: true
+- hosts: 192.168.1.216
+
 
   tasks:
-
-
-  - name: Création d'un utilisateur
-    user: name=user1 comment='ghost-shell' shell=/usr/bin/bash
+   - name: "Add deployment user"
+     action: user name=stagerMIT password=rootX
+# the password not work 
     
-    name: Remove user "Games" from remote server
-     user:
-       name: games
-       state: absent
-       remove: yes
+  
 
    
