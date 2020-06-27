@@ -1,0 +1,16 @@
+- name: install snmp
+  hosts: 192.168.1.225
+
+
+  tasks:
+    - name: remove  blender package
+      apt:
+         name: blender
+
+         state:  absent
+         autoremove: true
+
+
+      become: true
+      when: ansible_os_family == 'Debian'
+
