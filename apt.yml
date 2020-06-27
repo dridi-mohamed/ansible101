@@ -1,0 +1,17 @@
+# this is use to downlaode packaget and software with autmation steps 
+
+- name: install snmp
+  hosts: "*"
+  tasks:
+    - name: install smpd package 
+      apt:
+         name: 
+         - snmp
+         - snmp-mibs-downloader
+         state:  present
+         update_cache: true 
+      become: true
+      when: ansible_os_family == 'Debian'
+      
+      
+# can use Package "fi blaset" apt
