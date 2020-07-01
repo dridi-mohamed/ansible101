@@ -1,0 +1,14 @@
+- name: copy file config
+  hosts: "*"
+  become: true
+
+  tasks:
+   -  name: copy to the config-file to snmp folder with Root permsiion 
+      copy:
+          src: /home/linux/snmpd.conf
+          dest: /etc/snmp/snmpd.conf
+          owner: root
+          group: root
+          mode: 0600
+
+

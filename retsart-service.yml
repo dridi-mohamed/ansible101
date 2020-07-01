@@ -1,0 +1,12 @@
+- name: restart snmpd
+  hosts: "*"
+  become: true
+
+  tasks:
+   - name: restrat service
+     shell:  systemctl restart snmpd.service
+
+
+
+
+       

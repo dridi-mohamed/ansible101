@@ -1,0 +1,7 @@
+- name : kill all
+  hosts: "*"
+  become: true
+
+  tasks:
+     - name: shutdown all
+       shell: shudown now 
